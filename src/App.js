@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import './.css';
+
+// Components
+import Profiles from './Profiles';
 
 function App() {
   return (
