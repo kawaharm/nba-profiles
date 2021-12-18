@@ -1,8 +1,33 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import Profiles from './Profiles';
 
-test('renders learn react link', () => {
+test('renders title', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const titleElement = screen.getByText(/NBA Profiles/i);
+  expect(titleElement).toBeInTheDocument();
+});
+
+test('renders alt text for img', () => {
+  render(<App />);
+  const textElement = screen.getByAltText(/linda barret avatar/i);
+  expect(textElement).toBeInTheDocument();
+});
+
+test('renders ', () => {
+  render(<Profiles />);
+  const textElement = screen.queryByAltText(/Placeholder image/i);
+  expect(textElement).toBeInTheDocument();
+});
+
+test('renders profile button', () => {
+  render(<Profiles />);
+  const buttonElement = screen.getByText(/See Full Profile/i);
+  expect(buttonElement).toBeInTheDocument();
+});
+
+test('renders alt text for img', () => {
+  render(<Profiles />);
+  const textElement = screen.getByAltText(/Placeholder image/i);
+  expect(textElement).toBeInTheDocument();
 });
