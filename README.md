@@ -2,6 +2,9 @@
 This website displays several NBA players and their ESPN profile links. Using React, players are categorized by positions and belong in separate Components.  
 
 ## Installation Instructions
+1. Fork and clone Github project
+2. Install Node Package Manager in terminal and initialize `npm init -y`
+3. 
 
 ## Screenshots
 ### App
