@@ -1,6 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 import Profiles from './Profiles';
+import PointGuards from './PointGuards';
+import ShootingGuards from './ShootingGuards';
+import Navigation from './Navigation';
 
 test('renders title', () => {
   render(<App />);
@@ -15,19 +18,19 @@ test('renders alt text for img', () => {
 });
 
 test('renders ', () => {
-  render(<Profiles />);
+  render(<PointGuards />);
   const textElement = screen.queryByAltText(/Placeholder image/i);
   expect(textElement).toBeInTheDocument();
 });
 
 test('renders profile button', () => {
-  render(<Profiles />);
+  render(<PointGuards />);
   const buttonElement = screen.getByText(/See Full Profile/i);
   expect(buttonElement).toBeInTheDocument();
 });
 
 test('renders alt text for img', () => {
-  render(<Profiles />);
+  render(<PointGuards />);
   const textElement = screen.getByAltText(/Placeholder image/i);
   expect(textElement).toBeInTheDocument();
 });
