@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Profiles.css';
 
-class SG extends Component {
+class PointGuards extends Component {
     constructor(props) {
         super(props);
     }
@@ -30,4 +30,4 @@ class SG extends Component {
     }
 }
 
-export default SG;
+export default PointGuards;

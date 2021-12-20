@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import './Profiles.css';
 
 // Components
-import Players from './Players';
+import PointGuards from './PointGuards';
 import Navigation from './Navigation';
+import ShootingGuards from './ShootingGuards';
 
 const pointGuards = [
     {
@@ -38,7 +39,13 @@ const shootingGuards = [
         team: 'Golden State Warriors',
         image: 'https://img.bleacherreport.net/img/images/photos/003/702/864/1a5d4db530f5166f4528eed4481df168_crop_north.jpg?1508524875&w=3072&h=2048',
         link: 'https://www.espn.com/nba/player/_/id/6475/klay-thompson'
-    }
+    },
+    {
+        name: 'James Harden',
+        team: 'Brooklyn Nets',
+        image: 'https://beardstyle.net/wp-content/uploads/2015/11/CCyo8LbUEAALdiY.jpg',
+        link: 'https://www.espn.com/nba/player/stats/_/id/3992/james-harden'
+    },
 ]
 
 const navList = [
@@ -61,7 +68,13 @@ const navList = [
 
 const displayPointGuards = pointGuards.map((c, idx) => {
     return (
-        <Players key={idx} index={idx} name={c.name} team={c.team} image={c.image} link={c.link} />
+        <PointGuards key={idx} index={idx} name={c.name} team={c.team} image={c.image} link={c.link} />
+    );
+});
+
+const displayShootingGuards = shootingGuards.map((c, idx) => {
+    return (
+        <ShootingGuards key={idx} index={idx} name={c.name} team={c.team} image={c.image} link={c.link} />
     );
 });
 
@@ -86,7 +99,7 @@ class Profiles extends Component {
                                 NBA Profiles
                             </h1>
                             <p class="subtitle">
-                                (Point Guard Edition)
+                                {/* (Point Guard Edition) */}
                             </p>
                         </div>
                     </div>
@@ -100,8 +113,9 @@ class Profiles extends Component {
                     <div class="columns features">
                         <div class="columns is-multiline">
 
-                            {/* ****** ADD Profile Component Here ******* */}
+                            {/* ****** ADD Player Components Here ******* */}
                             {displayPointGuards}
+                            {displayShootingGuards}
                             {/* ****** ADD Profile Component Here ******* */}
                         </div>
                     </div>
