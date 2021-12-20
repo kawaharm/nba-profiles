@@ -44,7 +44,6 @@ class PointGuards extends Component {
 export default PointGuards;
 ```
 
-
 ### Data
 
 ```js
@@ -82,6 +81,18 @@ const displayPointGuards = pointGuards.map((c, idx) => {
 });
 ```
 
-
 ### Test
 
+```js
+test('renders profile button', () => {
+  render(<PointGuards />);
+  const buttonElement = screen.getByText(/See Full Profile/i);
+  expect(buttonElement).toBeInTheDocument();
+});
+
+test('renders alt text for img', () => {
+  render(<PointGuards />);
+  const textElement = screen.getByAltText(/Placeholder image/i);
+  expect(textElement).toBeInTheDocument();
+});
+```
