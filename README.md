@@ -1,6 +1,14 @@
 # NBA Profiles
+This website displays several NBA players and their ESPN profile links. Using React, players are categorized by positions and belong in separate Components.  
 
-## Screenshot 
-![Screenshot of template](https://user-images.githubusercontent.com/92088326/146623499-e4904883-4db3-4ad0-837f-d9f243f05b49.png)
+## Installation Instructions
 
-This website displays several NBA players in each position (P
+## Screenshots
+### App
+![Screen Shot 2021-12-20 at 10 13 03 AM (2)](https://user-images.githubusercontent.com/92088326/146814148-1606c4cc-7040-4354-b815-47a7bfe17a2c.png)
+### Component
+
+### Data
+
+### Test
+
